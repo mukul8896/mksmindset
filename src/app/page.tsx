@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from 'react';
-import { Menu, X, Github, Linkedin, Mail, ExternalLink, ChevronDown, Code, Zap, Award } from 'lucide-react';
+import { Menu, X, Github, Linkedin, Mail, ExternalLink, Code, Award } from 'lucide-react';
 
 export default function Portfolio() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -280,7 +280,7 @@ export default function Portfolio() {
       {/* CTA Section */}
       <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6">Let's Build Something Amazing</h2>
+          <h2 className="text-4xl font-bold mb-6">Let&apos;s Build Something Amazing</h2>
           <p className="text-xl text-slate-300 mb-8">Open to exciting opportunities, collaborations, and technical discussions.</p>
           
           <div className="flex flex-wrap gap-4 justify-center">
