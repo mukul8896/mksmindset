@@ -11,7 +11,7 @@ export default function Portfolio() {
       description: 'AI-powered trading bot with autonomous market signal generation and order execution. Built with LangChain, OpenAI, Python, and Angel One SmartAPI for real-time market analysis.',
       tags: ['Python', 'LangChain', 'OpenAI', 'Trading APIs', 'Generative AI'],
       github: 'https://github.com/mukul8896/TradingAgent.git',
-      impact: 'Demonstrates AI agents and workflows for portfoliao management and trading with real-time broker API integration'
+      impact: 'Demonstrates AI agents and workflows for portfoliao management and trading with realtime broker API integration'
     },
     {
       title: 'BDD Automation Framework',
@@ -26,7 +26,7 @@ export default function Portfolio() {
       tags: ['Node.js', 'React', 'Vercel', 'MongoDB', 'Responsive UI'],
       github: 'https://github.com/mukul8896/medi-hollow-instruments.git',
       live: 'https://medi-hollow-instruments.vercel.app/',
-      impact: 'Deliverd a complete product broucher site for online presence and increased sales with email query feature and modern UI/UX'
+      impact: 'Deliverd a complete product details site for online presence with email query feature and modern UI UX which increased sales'
     }
   ];
 
@@ -215,7 +215,7 @@ export default function Portfolio() {
           </h1>
 
           <p className="text-lg sm:text-xl text-slate-300 mb-10 leading-relaxed max-w-3xl mx-auto font-light">
-            Having 7+ years of expertise in ful stack software development, automation testing, and cloud like OCI/AWS/GCP. Specialized in integrating AI-Agents and tools in applications, microservices, and DevOps for optimization.
+            Having 7+ years of expertise in software development, automation, and cloud. Specialized in integrating AI-Agents and tools in applications, microservices, and DevOps for optimization.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -411,7 +411,7 @@ export default function Portfolio() {
       {/* Footer */}
       <footer className="bg-slate-950/80 border-t border-slate-700/50 py-12 px-4">
         <div className="max-w-6xl mx-auto text-center">
-          <p className="text-slate-400 font-light">© 2025 Mukul Kumar. Crafting exceptional solutions in full-stack development and automation engineering.</p>
+          <p className="text-slate-400 font-light">© 2025 Mukul Kumar. Crafting exceptional solutions in full-stack development and automation engineering</p>
         </div>
       </footer>
     </div>
