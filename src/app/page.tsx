@@ -7,36 +7,38 @@ export default function Portfolio() {
 
   const projects = [
     {
-      title: 'Generative AI Trading Agent',
+      title: 'AI Trading Agent',
       description: 'AI-powered trading bot with autonomous market signal generation and order execution. Built with LangChain, OpenAI, Python, and Angel One SmartAPI for real-time market analysis.',
       tags: ['Python', 'LangChain', 'OpenAI', 'Trading APIs', 'Generative AI'],
-      github: 'https://github.com/mukul8896',
+      github: 'https://github.com/mukul8896/TradingAgent.git',
       impact: 'Demonstrates RAG agents and real-time API integration'
     },
     {
       title: 'BDD Automation Framework',
       description: 'Scalable Java-based Cucumber-Selenium framework with Jenkins CI/CD integration, reusable components, and detailed HTML reporting for enterprise-grade test automation.',
       tags: ['Java', 'Selenium', 'Cucumber', 'Jenkins', 'CI/CD'],
-      github: 'https://github.com/mukul8896',
+      github: 'https://github.com/mukul8896/BDD_Cucumber.git',
       impact: 'Used in production environments for regression testing'
     },
     {
       title: 'Medi Hollow Instruments',
       description: 'Full-stack e-commerce platform with Node.js backend, React frontend, and Vercel deployment. Features dynamic product listings, responsive design, and inventory management.',
       tags: ['Node.js', 'React', 'Vercel', 'MongoDB', 'Responsive UI'],
-      github: 'https://github.com/mukul8896',
-      live: 'https://vercel.com',
+      github: 'https://github.com/mukul8896/medi-hollow-instruments.git',
+      live: 'https://medi-hollow-instruments.vercel.app/',
       impact: '10K+ monthly visitors with 98% uptime'
     }
   ];
 
   const skills = {
+    'Language': ['Java', 'JavaScript', 'TypeScript', 'Python', 'SQL', 'Bash'],
     'Frontend': ['React', 'JavaScript', 'Responsive Design', 'TailwindCSS'],
     'Backend & APIs': ['Node.js', 'Python', 'Java', 'REST APIs', 'Microservices'],
     'AI/ML': ['LangChain', 'OpenAI', 'Generative AI', 'RAG Agents', 'Prompt Engineering'],
-    'DevOps & Cloud': ['Jenkins', 'Docker', 'AWS', 'OCI', 'GCP', 'CI/CD Pipelines'],
-    'Testing': ['Selenium', 'WebdriverIO', 'Cucumber/BDD', 'Jest', 'TestNG'],
-    'Databases': ['MongoDB', 'MySQL', 'SQLite']
+    'DevOps & Cloud': ['Jenkins', 'Docker', 'Linux systems', 'AWS', 'OCI', 'GCP', 'CI/CD Pipelines', 'bash', 'shell scripting'],
+    'Testing': ['Selenium', 'WebdriverIO', 'Cucumber/BDD', 'TestNG'],
+    'Databases': ['MongoDB', 'MySQL', 'SQLite'],
+    'Platforms & Tools': ['Git', 'GitHub', 'Jira', 'Confluence', 'VS Code']
   };
 
   const experience = [
@@ -59,15 +61,45 @@ export default function Portfolio() {
         'Implemented Jenkins pipelines for regression and integration test suites',
         'Created automation APIs serving 5+ internal developer teams'
       ]
+    },
+    {
+      role: 'Software Engineer',
+      company: 'Frontdoor Inc.',
+      period: '05/2020 - 05/2021',
+      highlights: [
+        'Built and enhanced UI automation (Selenium, JUnit, Maven) and API automation (Karate, REST Assured) for Contractor Portal',
+        'Standardized regression planning, automated manual workflows across teams, maintained stable suites, and enforced PR reviews pre-merge to QA',
+      ]
+    },
+    {
+      role: 'Operations Executive',
+      company: 'Infosys',
+      period: '04/2018 - 04/2020',
+      highlights: [
+        'Developed Selenium, TestNG, and Maven framework featuring custom reporting, cross-browser execution.',
+      ]
     }
   ];
 
   const certifications = [
-    'Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate',
-    'Oracle Cloud Infrastructure 2024 Certified OCI Foundations Associate',
-    'Google Cloud Associate Cloud Engineer',
-    'AWS Certified Cloud Practitioner (CLF-C02)'
+    {
+      certName: 'Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate',
+      certLink: 'https://catalog-education.oracle.com/ords/certview/sharebadge?id=952E717540E2E03D2043CE323AB32618C351983FD5B678E81883600D5CCD6F89'
+    },
+    {
+      certName: 'Oracle Cloud Infrastructure 2024 Certified OCI Foundations Associate',
+      certLink: 'https://catalog-education.oracle.com/ords/certview/sharebadge?id=F6B46C0EFBE1BEFBFC6D4609E419E2D355D99D614A4A2E6CD0B1732371CEBEB9'
+    },
+    {
+      certName: 'Google Cloud Associate Cloud Engineer',
+      certLink: 'https://www.udemy.com/certificate/UC-b1451c42-9ec2-4657-acdd-37fa9b13dd20/'
+    },
+    {
+      certName: 'AWS Certified Cloud Practitioner (CLF-C02)',
+      certLink: 'https://www.udemy.com/certificate/UC-e7d75715-3ec4-4a8a-adb7-883920945af4/'
+    }
   ];
+
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 text-white">
@@ -112,16 +144,16 @@ export default function Portfolio() {
         <div className="max-w-4xl mx-auto relative z-10 text-center">
           <div className="mb-8">
             <div className="inline-block px-4 py-2 bg-blue-500/20 border border-blue-400/50 rounded-full text-blue-300 text-sm font-semibold mb-6">
-              🚀 Senior Software Engineer at Oracle
+              🚀 Senior Software Engineer @ Oracle
             </div>
           </div>
           
           <h1 className="text-5xl sm:text-7xl font-bold mb-6 leading-tight">
-            Full-Stack Developer & <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">AI Engineer</span>
+            Full-Stack Developer & <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Automation Engineer</span>
           </h1>
           
           <p className="text-xl text-slate-300 mb-8 leading-relaxed max-w-2xl mx-auto">
-            7+ years building scalable automation tools, backend systems, and AI-integrated applications. Expertise in Node.js, Python, React, and Generative AI. Certified in Oracle Cloud and AWS.
+            7+ years experience in Software Development and Testing, building automation tools, frontend & backend systems, and AI-integrated applications. Expertise in Java, Javascript, Selenium, Node.js, Python, React, and Generative AI. Certified in Oracle Cloud and Gen AI Associate.
           </p>
 
           <div className="flex flex-wrap gap-4 justify-center mb-12">
@@ -265,12 +297,17 @@ export default function Portfolio() {
             <Award className="text-yellow-400" size={32} />
             Certifications
           </h2>
-          
+        
           <div className="grid md:grid-cols-2 gap-4">
-            {certifications.map((cert, i) => (
-              <div key={i} className="bg-slate-800/80 border border-slate-700 rounded-lg p-4 hover:border-yellow-400/50 transition flex items-center gap-3">
+            {certifications.map(({ certName, certLink }, i) => (
+              <div
+                key={i}
+                className="bg-slate-800/80 border border-slate-700 rounded-lg p-4 hover:border-yellow-400/50 transition flex items-center gap-3"
+              >
                 <div className="w-2 h-2 bg-yellow-400 rounded-full flex-shrink-0"></div>
-                <p className="text-slate-200">{cert}</p>
+                <a href={certLink} target="_blank" rel="noopener noreferrer">
+                  <p className="text-slate-200">{certName}</p>
+                </a>
               </div>
             ))}
           </div>
