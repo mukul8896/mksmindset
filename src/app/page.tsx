@@ -391,7 +391,7 @@ export default function Portfolio() {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-5xl font-bold mb-6">Let's Create Impact Together</h2>
           <p className="text-xl text-slate-300 mb-12 font-light leading-relaxed">
-            I'm open to exciting opportunities, technical collaborations, and strategic partnerships. Let's discuss how we can build something exceptional.
+            I'm open to exciting opportunities, technical collaborations, and partnerships. Let's discuss how we can build something exceptional.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -411,7 +411,7 @@ export default function Portfolio() {
       {/* Footer */}
       <footer className="bg-slate-950/80 border-t border-slate-700/50 py-12 px-4">
         <div className="max-w-6xl mx-auto text-center">
-          <p className="text-slate-400 font-light">© 2025 Mukul Kumar. Crafting exceptional solutions in full-stack development, automation engineering, and cloud architecture.</p>
+          <p className="text-slate-400 font-light">© 2025 Mukul Kumar. Crafting exceptional solutions in full-stack development and automation engineering.</p>
         </div>
       </footer>
     </div>
