@@ -36,7 +36,7 @@ export default function Portfolio() {
     'Backend & APIs': ['Node.js', 'Python', 'Java', 'REST APIs', 'Microservices'],
     'AI/ML': ['LangChain', 'OpenAI', 'Generative AI', 'RAG Agents', 'Prompt Engineering'],
     'DevOps & Cloud': ['Jenkins', 'Docker', 'Linux systems', 'AWS', 'OCI', 'GCP', 'CI/CD Pipelines', 'bash', 'shell scripting'],
-    'Testing': ['Selenium', 'WebdriverIO', 'Cucumber/BDD', 'TestNG'],
+    'Testing': ['JUnit','Selenium', 'WebdriverIO', 'Cucumber/BDD', 'TestNG'],
     'Databases': ['MongoDB', 'MySQL', 'SQLite'],
     'Platforms & Tools': ['Git', 'GitHub', 'Jira', 'Confluence', 'VS Code']
   };
