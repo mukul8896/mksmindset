@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from 'react';
-import { Menu, X, Github, Linkedin, Mail, ExternalLink, Code, Award } from 'lucide-react';
+import { Menu, X, Github, Linkedin, Mail, ExternalLink, Code, Award, ArrowRight, ChevronDown } from 'lucide-react';
 
 export default function Portfolio() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -11,14 +11,14 @@ export default function Portfolio() {
       description: 'AI-powered trading bot with autonomous market signal generation and order execution. Built with LangChain, OpenAI, Python, and Angel One SmartAPI for real-time market analysis.',
       tags: ['Python', 'LangChain', 'OpenAI', 'Trading APIs', 'Generative AI'],
       github: 'https://github.com/mukul8896/TradingAgent.git',
-      impact: 'Demonstrates RAG agents and real-time API integration'
+      impact: 'Demonstrates AI agents and workflows for portfoliao management and trading with real-time broker API integration'
     },
     {
       title: 'BDD Automation Framework',
       description: 'Scalable Java-based Cucumber-Selenium framework with Jenkins CI/CD integration, reusable components, and detailed HTML reporting for enterprise-grade test automation.',
       tags: ['Java', 'Selenium', 'Cucumber', 'Jenkins', 'CI/CD'],
       github: 'https://github.com/mukul8896/BDD_Cucumber.git',
-      impact: 'Used in production environments for regression testing'
+      impact: 'Used in test environments for regression testing'
     },
     {
       title: 'Medi Hollow Instruments',
@@ -26,26 +26,26 @@ export default function Portfolio() {
       tags: ['Node.js', 'React', 'Vercel', 'MongoDB', 'Responsive UI'],
       github: 'https://github.com/mukul8896/medi-hollow-instruments.git',
       live: 'https://medi-hollow-instruments.vercel.app/',
-      impact: '10K+ monthly visitors with 98% uptime'
+      impact: 'Deliverd a complete product broucher site for online presence and increased sales with email query feature and modern UI/UX'
     }
   ];
 
   const skills = {
-    'Language': ['Java', 'JavaScript', 'TypeScript', 'Python', 'SQL', 'Bash'],
-    'Frontend': ['React', 'JavaScript', 'Responsive Design', 'TailwindCSS'],
+    'Languages': ['Java', 'JavaScript', 'TypeScript', 'Python', 'SQL', 'Bash'],
+    'Frontend Development': ['React', 'TailwindCSS', 'Responsive Design', 'Modern UI/UX'],
     'Backend & APIs': ['Node.js', 'Python', 'Java', 'REST APIs', 'Microservices'],
-    'AI/ML': ['LangChain', 'OpenAI', 'Generative AI', 'RAG Agents', 'Prompt Engineering'],
-    'DevOps & Cloud': ['Jenkins', 'Docker', 'Linux systems', 'AWS', 'OCI', 'GCP', 'CI/CD Pipelines', 'bash', 'shell scripting'],
-    'Testing': ['JUnit','Selenium', 'WebdriverIO', 'Cucumber/BDD', 'TestNG'],
+    'AI & Machine Learning': ['LangChain', 'OpenAI', 'Generative AI', 'RAG Agents', 'Prompt Engineering'],
+    'Cloud & DevOps': ['Jenkins', 'Docker', 'AWS', 'OCI', 'GCP', 'CI/CD Pipelines', 'Linux'],
+    'Quality Assurance': ['Selenium', 'JUnit', 'WebdriverIO', 'Cucumber/BDD', 'TestNG'],
     'Databases': ['MongoDB', 'MySQL', 'SQLite'],
-    'Platforms & Tools': ['Git', 'GitHub', 'Jira', 'Confluence', 'VS Code']
+    'Tools & Platforms': ['Git', 'GitHub', 'Jira', 'Confluence', 'VS Code']
   };
 
   const experience = [
     {
       role: 'Senior Software Engineer',
       company: 'Oracle',
-      period: '05/2023 - Current',
+      period: '05/2023 - Present',
       highlights: [
         'Built Node.js WebdriverIO automation framework improving test stability by 40%',
         'Developed AI-powered test case generation tools reducing manual effort by 60%',
@@ -67,8 +67,9 @@ export default function Portfolio() {
       company: 'Frontdoor Inc.',
       period: '05/2020 - 05/2021',
       highlights: [
-        'Built and enhanced UI automation (Selenium, JUnit, Maven) and API automation (Karate, REST Assured) for Contractor Portal',
-        'Standardized regression planning, automated manual workflows across teams, maintained stable suites, and enforced PR reviews pre-merge to QA',
+        'Built and enhanced UI automation (Selenium, JUnit, Maven) and API automation (Karate, REST Assured)',
+        'Standardized regression planning and automated manual workflows across teams',
+        'Maintained stable test suites with enforced PR reviews pre-merge to QA'
       ]
     },
     {
@@ -76,7 +77,7 @@ export default function Portfolio() {
       company: 'Infosys',
       period: '04/2018 - 04/2020',
       highlights: [
-        'Developed Selenium, TestNG, and Maven framework featuring custom reporting, cross-browser execution.',
+        'Developed Selenium, TestNG, and Maven framework with custom reporting and cross-browser execution'
       ]
     }
   ];
@@ -100,122 +101,181 @@ export default function Portfolio() {
     }
   ];
 
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 text-white">
-      {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-slate-950/95 backdrop-blur border-b border-slate-700">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 text-white overflow-x-hidden">
+      {/* Top Bar with Social Links */}
+      <div className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-slate-950/98 to-slate-900/98 backdrop-blur-md border-b border-slate-700/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+            {/* Logo */}
+            <a href="#" className="text-2xl font-bold bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent hover:from-blue-300 hover:to-cyan-300 transition">
               Mukul Kumar
-            </div>
-            
-            {/* Desktop Menu */}
-            <div className="hidden md:flex gap-8">
-              {['About', 'Experience', 'Projects', 'Skills', 'Contact'].map(item => (
-                <a key={item} href={`#${item.toLowerCase()}`} className="hover:text-blue-400 transition">
-                  {item}
-                </a>
-              ))}
+            </a>
+
+            {/* Desktop Navigation Links */}
+            <div className="hidden md:flex items-center gap-8">
+              <a href="#about" className="text-sm font-medium text-slate-300 hover:text-blue-400 transition duration-300">
+                About
+              </a>
+              <a href="#experience" className="text-sm font-medium text-slate-300 hover:text-blue-400 transition duration-300">
+                Experience
+              </a>
+              <a href="#projects" className="text-sm font-medium text-slate-300 hover:text-blue-400 transition duration-300">
+                Projects
+              </a>
+              <a href="#skills" className="text-sm font-medium text-slate-300 hover:text-blue-400 transition duration-300">
+                Skills
+              </a>
+              <div className="w-px h-6 bg-slate-700"></div>
+              <a href="https://github.com/mukul8896" target="_blank" rel="noopener noreferrer" 
+                className="p-2.5 text-slate-400 hover:text-blue-400 hover:bg-blue-500/10 rounded-lg transition duration-300">
+                <Github size={20} />
+              </a>
+              <a href="https://linkedin.com/in/mukul-kumar-6408ab13b" target="_blank" rel="noopener noreferrer"
+                className="p-2.5 text-slate-400 hover:text-blue-400 hover:bg-blue-500/10 rounded-lg transition duration-300">
+                <Linkedin size={20} />
+              </a>
+              <a href="mailto:mukul.sharma8896@gmail.com"
+                className="p-2.5 text-slate-400 hover:text-blue-400 hover:bg-blue-500/10 rounded-lg transition duration-300">
+                <Mail size={20} />
+              </a>
+              <a href="#contact" className="px-4 py-2 text-sm font-semibold text-slate-300 hover:text-white hover:bg-blue-600/20 rounded-lg transition duration-300">
+                Contact
+              </a>
             </div>
 
-            {/* Mobile Menu */}
-            <button className="md:hidden" onClick={() => setMobileOpen(!mobileOpen)}>
-              {mobileOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
+            {/* Mobile Menu Button */}
+            <div className="md:hidden flex items-center gap-2">
+              <button className="p-2.5 text-slate-400 hover:text-blue-400 rounded-lg transition"
+                onClick={() => setMobileOpen(!mobileOpen)}>
+                {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+              </button>
+            </div>
           </div>
-          
+
+          {/* Mobile Menu */}
           {mobileOpen && (
-            <div className="md:hidden pb-4 flex flex-col gap-3">
-              {['About', 'Experience', 'Projects', 'Skills', 'Contact'].map(item => (
-                <a key={item} href={`#${item.toLowerCase()}`} className="hover:text-blue-400 transition">
-                  {item}
+            <div className="md:hidden pb-4 flex flex-col gap-2 border-t border-slate-700/50 pt-4">
+              <a href="#about" onClick={() => setMobileOpen(false)}
+                className="px-4 py-2 text-slate-300 hover:text-blue-400 hover:bg-slate-800/50 rounded transition">
+                About
+              </a>
+              <a href="#experience" onClick={() => setMobileOpen(false)}
+                className="px-4 py-2 text-slate-300 hover:text-blue-400 hover:bg-slate-800/50 rounded transition">
+                Experience
+              </a>
+              <a href="#projects" onClick={() => setMobileOpen(false)}
+                className="px-4 py-2 text-slate-300 hover:text-blue-400 hover:bg-slate-800/50 rounded transition">
+                Projects
+              </a>
+              <a href="#skills" onClick={() => setMobileOpen(false)}
+                className="px-4 py-2 text-slate-300 hover:text-blue-400 hover:bg-slate-800/50 rounded transition">
+                Skills
+              </a>
+              <a href="#contact" onClick={() => setMobileOpen(false)}
+                className="px-4 py-2 text-slate-300 hover:text-blue-400 hover:bg-slate-800/50 rounded transition">
+                Contact
+              </a>
+              <div className="my-2 px-4 py-2 flex items-center gap-4 border-t border-slate-700/50 pt-4">
+                <a href="https://github.com/mukul8896" target="_blank" rel="noopener noreferrer"
+                  className="text-slate-400 hover:text-blue-400 transition">
+                  <Github size={20} />
                 </a>
-              ))}
+                <a href="https://linkedin.com/in/mukul-kumar-6408ab13b" target="_blank" rel="noopener noreferrer"
+                  className="text-slate-400 hover:text-blue-400 transition">
+                  <Linkedin size={20} />
+                </a>
+                <a href="mailto:mukul.sharma8896@gmail.com"
+                  className="text-slate-400 hover:text-blue-400 transition">
+                  <Mail size={20} />
+                </a>
+              </div>
             </div>
           )}
         </div>
-      </nav>
+      </div>
 
       {/* Hero Section */}
-      <section id="about" className="relative min-h-screen flex items-center pt-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
-        <div className="max-w-4xl mx-auto relative z-10 text-center">
-          <div className="mb-8">
-            <div className="inline-block px-4 py-2 bg-blue-500/20 border border-blue-400/50 rounded-full text-blue-300 text-sm font-semibold mb-6">
-              🚀 Senior Software Engineer @ Oracle
+      <section id="about" className="relative min-h-screen flex items-center pt-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(100,200,255,0.05)_1px,transparent_1px)] bg-[length:40px_40px] opacity-20"></div>
+        <div className="absolute top-40 -left-40 w-80 h-80 bg-blue-500/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-40 -right-40 w-80 h-80 bg-cyan-500/5 rounded-full blur-3xl"></div>
+
+        <div className="max-w-5xl mx-auto relative z-10 w-full">
+          <div className="mb-10 flex flex-col items-center text-center">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/15 border border-blue-400/30 rounded-full text-blue-300 text-sm font-semibold mb-8 hover:border-blue-400/50 transition">
+              <span className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></span>
+              Senior Software Engineer @ Oracle
             </div>
           </div>
-          
-          <h1 className="text-5xl sm:text-7xl font-bold mb-6 leading-tight">
-            Full-Stack Developer & <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Automation Engineer</span>
+
+          <h1 className="text-6xl sm:text-7xl lg:text-8xl font-bold mb-8 leading-tight tracking-tight">
+            Full-Stack Developer <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500">&</span> <br/>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Automation Engineer</span>
           </h1>
-          
-          <p className="text-xl text-slate-300 mb-8 leading-relaxed max-w-2xl mx-auto">
-            7+ years experience in Software Development and Testing, building automation tools, frontend & backend systems, and AI-integrated applications. Expertise in Java, Javascript, Selenium, Node.js, Python, React, and Generative AI. Certified in Oracle Cloud and Gen AI Associate.
+
+          <p className="text-lg sm:text-xl text-slate-300 mb-10 leading-relaxed max-w-3xl mx-auto font-light">
+            I craft scalable enterprise solutions with 7+ years of expertise in software development, automation, and cloud architecture. Specialized in AI-powered applications, microservices, and DevOps optimization.
           </p>
 
-          <div className="flex flex-wrap gap-4 justify-center mb-12">
-            <a href="#projects" className="px-8 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg font-semibold hover:shadow-lg hover:shadow-blue-500/50 transition transform hover:scale-105">
-              View My Work
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+            <a href="#projects" className="group px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg font-semibold hover:shadow-2xl hover:shadow-blue-500/40 transition duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
+              Explore My Work
+              <ArrowRight size={20} className="group-hover:translate-x-1 transition" />
             </a>
-            <a href="mailto:mukul.sharma8896@gmail.com" className="px-8 py-3 border border-slate-500 rounded-lg font-semibold hover:bg-slate-800 transition">
+            <a href="mailto:mukul.sharma8896@gmail.com" className="px-8 py-4 border border-slate-400 rounded-lg font-semibold hover:bg-slate-800/50 hover:border-blue-400 transition duration-300">
               Get In Touch
             </a>
           </div>
 
-          <div className="flex justify-center gap-6">
-            <a href="https://github.com/mukul8896" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-blue-400 transition">
-              <Github size={28} />
-            </a>
-            <a href="https://linkedin.com/in/mukul-kumar-6408ab13b" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-blue-400 transition">
-              <Linkedin size={28} />
-            </a>
-            <a href="mailto:mukul.sharma8896@gmail.com" className="text-slate-400 hover:text-blue-400 transition">
-              <Mail size={28} />
-            </a>
+          <div className="flex justify-center">
+            <ChevronDown className="animate-bounce text-blue-400" size={32} />
           </div>
         </div>
       </section>
 
-      {/* Quick Stats */}
-      <section className="bg-slate-800/50 py-16 px-4">
+      {/* Stats Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 border-y border-slate-700/50">
         <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
           {[
             { label: 'Years Experience', value: '7+' },
-            { label: 'Projects Built', value: '30+' },
-            { label: 'Tech Stack', value: '20+' },
-            { label: 'Cloud Certified', value: '4' }
+            { label: 'Projects Delivered', value: '30+' },
+            { label: 'Technologies', value: '20+' },
+            { label: 'Cloud Certifications', value: '4' }
           ].map((stat, i) => (
-            <div key={i} className="text-center">
-              <div className="text-3xl font-bold text-blue-400 mb-2">{stat.value}</div>
-              <div className="text-slate-400">{stat.label}</div>
+            <div key={i} className="text-center group">
+              <div className="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400 mb-3 group-hover:scale-110 transition duration-300">
+                {stat.value}
+              </div>
+              <div className="text-slate-400 text-sm sm:text-base font-medium">{stat.label}</div>
             </div>
           ))}
         </div>
       </section>
 
       {/* Experience Section */}
-      <section id="experience" className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-16 text-center">Experience & Track Record</h2>
-          
-          <div className="space-y-8">
+      <section id="experience" className="py-24 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto">
+          <div className="mb-16">
+            <h2 className="text-5xl font-bold mb-4">Professional Experience</h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full"></div>
+          </div>
+
+          <div className="space-y-6">
             {experience.map((exp, i) => (
-              <div key={i} className="bg-slate-800/50 border border-slate-700 rounded-xl p-8 hover:border-blue-500/50 transition">
-                <div className="flex justify-between items-start mb-4">
+              <div key={i} className="group bg-gradient-to-br from-slate-800/30 to-slate-900/20 border border-slate-700/50 rounded-xl p-8 hover:border-blue-400/30 hover:bg-slate-800/40 transition duration-300">
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-4 mb-6">
                   <div>
-                    <h3 className="text-2xl font-bold text-blue-400">{exp.role}</h3>
-                    <p className="text-slate-400">{exp.company}</p>
+                    <h3 className="text-2xl font-bold text-blue-400 group-hover:text-cyan-400 transition mb-2">{exp.role}</h3>
+                    <p className="text-slate-300 font-medium text-lg">{exp.company}</p>
                   </div>
-                  <span className="text-sm text-slate-400">{exp.period}</span>
+                  <span className="text-sm text-slate-400 font-semibold px-4 py-2 bg-slate-700/30 rounded-lg whitespace-nowrap">{exp.period}</span>
                 </div>
-                <ul className="space-y-2">
+                <ul className="space-y-3">
                   {exp.highlights.map((highlight, j) => (
-                    <li key={j} className="flex gap-3 text-slate-300">
-                      <span className="text-blue-400 mt-1">▸</span>
-                      {highlight}
+                    <li key={j} className="flex gap-4 text-slate-300">
+                      <span className="text-blue-400 font-bold mt-1 flex-shrink-0">→</span>
+                      <span className="leading-relaxed">{highlight}</span>
                     </li>
                   ))}
                 </ul>
@@ -225,37 +285,40 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Featured Projects */}
-      <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+      {/* Projects Section */}
+      <section id="projects" className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent via-slate-800/20 to-transparent">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-16 text-center">Featured Projects</h2>
-          
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="mb-16">
+            <h2 className="text-5xl font-bold mb-4">Featured Projects</h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full"></div>
+          </div>
+
+          <div className="grid lg:grid-cols-3 gap-8">
             {projects.map((project, i) => (
-              <div key={i} className="bg-slate-800/80 border border-slate-700 rounded-xl overflow-hidden hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-500/10 transition group">
-                <div className="p-8">
-                  <h3 className="text-xl font-bold mb-3 text-blue-400 group-hover:text-cyan-400 transition">{project.title}</h3>
-                  <p className="text-slate-300 mb-4 text-sm leading-relaxed">{project.description}</p>
-                  
-                  <div className="mb-4 p-3 bg-slate-700/50 rounded border border-slate-600">
-                    <p className="text-xs text-slate-400"><span className="text-cyan-400 font-semibold">Impact:</span> {project.impact}</p>
+              <div key={i} className="group h-full bg-gradient-to-br from-slate-800/50 to-slate-900/20 border border-slate-700/50 rounded-xl overflow-hidden hover:border-blue-400/50 hover:shadow-2xl hover:shadow-blue-500/10 transition duration-300">
+                <div className="p-8 flex flex-col h-full">
+                  <h3 className="text-2xl font-bold mb-4 text-blue-400 group-hover:text-cyan-400 transition">{project.title}</h3>
+                  <p className="text-slate-300 mb-6 text-sm leading-relaxed flex-grow">{project.description}</p>
+
+                  <div className="mb-6 p-4 bg-slate-700/30 rounded-lg border border-slate-600/30">
+                    <p className="text-xs text-slate-400"><span className="text-cyan-400 font-semibold">Key Impact:</span> {project.impact}</p>
                   </div>
-                  
+
                   <div className="flex flex-wrap gap-2 mb-6">
                     {project.tags.map((tag, j) => (
-                      <span key={j} className="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-xs font-semibold">
+                      <span key={j} className="px-3 py-1 bg-blue-500/15 text-blue-300 rounded-full text-xs font-semibold border border-blue-400/20 hover:border-blue-400/50 transition">
                         {tag}
                       </span>
                     ))}
                   </div>
-                  
+
                   <div className="flex gap-3">
-                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="flex-1 px-4 py-2 bg-slate-700 hover:bg-blue-600 rounded transition text-center text-sm font-semibold flex items-center justify-center gap-2">
+                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="flex-1 px-4 py-3 bg-slate-700/50 hover:bg-blue-600/30 border border-slate-600 hover:border-blue-400 rounded-lg transition text-center text-sm font-semibold flex items-center justify-center gap-2 text-slate-300 hover:text-blue-300">
                       <Github size={16} /> Code
                     </a>
                     {project.live && (
-                      <a href={project.live} target="_blank" rel="noopener noreferrer" className="flex-1 px-4 py-2 bg-blue-600 hover:bg-blue-500 rounded transition text-center text-sm font-semibold flex items-center justify-center gap-2">
-                        <ExternalLink size={16} /> Live
+                      <a href={project.live} target="_blank" rel="noopener noreferrer" className="flex-1 px-4 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 rounded-lg transition text-center text-sm font-semibold flex items-center justify-center gap-2">
+                        <ExternalLink size={16} /> Live Demo
                       </a>
                     )}
                   </div>
@@ -267,19 +330,22 @@ export default function Portfolio() {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8">
+      <section id="skills" className="py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-16 text-center">Skills & Expertise</h2>
-          
+          <div className="mb-16">
+            <h2 className="text-5xl font-bold mb-4">Skills & Expertise</h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full"></div>
+          </div>
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {Object.entries(skills).map(([category, items], i) => (
-              <div key={i} className="bg-slate-800/50 border border-slate-700 rounded-xl p-6 hover:border-blue-500/50 transition">
-                <h3 className="text-lg font-bold text-blue-400 mb-4 flex items-center gap-2">
+              <div key={i} className="group bg-gradient-to-br from-slate-800/30 to-slate-900/20 border border-slate-700/50 rounded-xl p-7 hover:border-blue-400/30 hover:bg-slate-800/40 transition duration-300">
+                <h3 className="text-lg font-bold text-blue-400 group-hover:text-cyan-400 transition mb-5 flex items-center gap-2">
                   <Code size={20} /> {category}
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {items.map((skill, j) => (
-                    <span key={j} className="px-3 py-1 bg-slate-700 rounded-full text-sm text-slate-200 hover:bg-blue-600 transition cursor-pointer">
+                    <span key={j} className="px-3.5 py-2 bg-slate-700/40 rounded-full text-sm text-slate-300 border border-slate-600/40 hover:border-blue-400/50 hover:bg-blue-500/10 hover:text-blue-300 transition duration-300 cursor-pointer">
                       {skill}
                     </span>
                   ))}
@@ -291,53 +357,61 @@ export default function Portfolio() {
       </section>
 
       {/* Certifications */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center flex items-center justify-center gap-3">
-            <Award className="text-yellow-400" size={32} />
-            Certifications
-          </h2>
-        
-          <div className="grid md:grid-cols-2 gap-4">
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent via-slate-800/20 to-transparent">
+        <div className="max-w-5xl mx-auto">
+          <div className="mb-16 text-center">
+            <h2 className="text-5xl font-bold mb-4 flex items-center justify-center gap-3">
+              <Award className="text-yellow-400" size={40} />
+              Professional Certifications
+            </h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-yellow-400 to-amber-400 rounded-full mx-auto"></div>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-5">
             {certifications.map(({ certName, certLink }, i) => (
-              <div
+              <a
                 key={i}
-                className="bg-slate-800/80 border border-slate-700 rounded-lg p-4 hover:border-yellow-400/50 transition flex items-center gap-3"
+                href={certLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group bg-gradient-to-br from-slate-800/40 to-slate-900/20 border border-slate-700/50 rounded-lg p-5 hover:border-yellow-400/50 hover:bg-slate-800/50 transition duration-300"
               >
-                <div className="w-2 h-2 bg-yellow-400 rounded-full flex-shrink-0"></div>
-                <a href={certLink} target="_blank" rel="noopener noreferrer">
-                  <p className="text-slate-200">{certName}</p>
-                </a>
-              </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-3 h-3 bg-gradient-to-r from-yellow-400 to-amber-400 rounded-full flex-shrink-0 mt-2"></div>
+                  <p className="text-slate-200 group-hover:text-white font-medium transition">{certName}</p>
+                </div>
+              </a>
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8">
+      <section id="contact" className="py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6">Let&apos;s Build Something Amazing</h2>
-          <p className="text-xl text-slate-300 mb-8">Open to exciting opportunities, collaborations, and technical discussions.</p>
-          
-          <div className="flex flex-wrap gap-4 justify-center">
-            <a href="mailto:mukul.sharma8896@gmail.com" className="px-8 py-3 bg-blue-600 hover:bg-blue-500 rounded-lg font-semibold transition flex items-center gap-2">
-              <Mail size={20} /> Email Me
+          <h2 className="text-5xl font-bold mb-6">Let's Create Impact Together</h2>
+          <p className="text-xl text-slate-300 mb-12 font-light leading-relaxed">
+            I'm open to exciting opportunities, technical collaborations, and strategic partnerships. Let's discuss how we can build something exceptional.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="mailto:mukul.sharma8896@gmail.com" className="group px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 rounded-lg font-semibold transition duration-300 flex items-center justify-center gap-2 hover:shadow-lg hover:shadow-blue-500/30">
+              <Mail size={20} /> Send Email
             </a>
-            <a href="https://linkedin.com/in/mukul-kumar-6408ab13b" target="_blank" rel="noopener noreferrer" className="px-8 py-3 border border-blue-500 text-blue-400 hover:bg-blue-500/10 rounded-lg font-semibold transition flex items-center gap-2">
-              <Linkedin size={20} /> LinkedIn
+            <a href="https://linkedin.com/in/mukul-kumar-6408ab13b" target="_blank" rel="noopener noreferrer" className="px-8 py-4 border border-blue-400/50 text-blue-400 hover:bg-blue-500/10 rounded-lg font-semibold transition duration-300 flex items-center justify-center gap-2">
+              <Linkedin size={20} /> LinkedIn Profile
             </a>
-            <a href="https://github.com/mukul8896" target="_blank" rel="noopener noreferrer" className="px-8 py-3 border border-slate-500 hover:border-slate-300 rounded-lg font-semibold transition flex items-center gap-2">
-              <Github size={20} /> GitHub
+            <a href="https://github.com/mukul8896" target="_blank" rel="noopener noreferrer" className="px-8 py-4 border border-slate-500 hover:border-slate-300 hover:bg-slate-800/50 rounded-lg font-semibold transition duration-300 flex items-center justify-center gap-2">
+              <Github size={20} /> View GitHub
             </a>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-slate-950 border-t border-slate-700 py-8 px-4">
-        <div className="max-w-6xl mx-auto text-center text-slate-400">
-          <p>© 2025 Mukul Kumar. Crafted with expertise in full-stack development & Automation Testing.</p>
+      <footer className="bg-slate-950/80 border-t border-slate-700/50 py-12 px-4">
+        <div className="max-w-6xl mx-auto text-center">
+          <p className="text-slate-400 font-light">© 2025 Mukul Kumar. Crafting exceptional solutions in full-stack development, automation engineering, and cloud architecture.</p>
         </div>
       </footer>
     </div>
