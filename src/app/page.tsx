@@ -390,9 +390,9 @@ export default function Portfolio() {
       {/* CTA Section */}
       <section id="contact" className="py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-5xl font-bold mb-6">Let's Create Impact Together</h2>
+          <h2 className="text-5xl font-bold mb-6">Let&apos;s Create Impact Together</h2>
           <p className="text-xl text-slate-300 mb-12 font-light leading-relaxed">
-            I am open to exciting opportunities, technical collaborations, and partnerships. Let's discuss how we can build something exceptional.
+            I am open to exciting opportunities, technical collaborations, and partnerships. Let&apos;s discuss how we can build something exceptional.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
