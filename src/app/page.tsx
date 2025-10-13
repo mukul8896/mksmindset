@@ -337,7 +337,7 @@ export default function Portfolio() {
       {/* Footer */}
       <footer className="bg-slate-950 border-t border-slate-700 py-8 px-4">
         <div className="max-w-6xl mx-auto text-center text-slate-400">
-          <p>© 2025 Mukul Kumar. Crafted with expertise in full-stack development & AI.</p>
+          <p>© 2025 Mukul Kumar. Crafted with expertise in full-stack development & Automation Testing.</p>
         </div>
       </footer>
     </div>
