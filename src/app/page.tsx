@@ -215,7 +215,7 @@ export default function Portfolio() {
           </h1>
 
           <p className="text-lg sm:text-xl text-slate-300 mb-10 leading-relaxed max-w-3xl mx-auto font-light">
-            I craft scalable enterprise solutions with 7+ years of expertise in software development, automation, and cloud architecture. Specialized in AI-powered applications, microservices, and DevOps optimization.
+            Having 7+ years of expertise in ful stack software development, automation testing, and cloud like OCI/AWS/GCP. Specialized in integrating AI-Agents and tools in applications, microservices, and DevOps for optimization.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
