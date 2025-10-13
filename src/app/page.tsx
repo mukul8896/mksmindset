@@ -218,6 +218,7 @@ export default function Portfolio() {
             Having 7+ years of expertise in software development, automation, and cloud. Specialized in integrating AI-Agents and tools in applications, microservices, and DevOps for optimization.
           </p>
 
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <a href="#projects" className="group px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg font-semibold hover:shadow-2xl hover:shadow-blue-500/40 transition duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
               Explore My Work
@@ -391,7 +392,7 @@ export default function Portfolio() {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-5xl font-bold mb-6">Let's Create Impact Together</h2>
           <p className="text-xl text-slate-300 mb-12 font-light leading-relaxed">
-            I'm open to exciting opportunities, technical collaborations, and partnerships. Let's discuss how we can build something exceptional.
+            I am open to exciting opportunities, technical collaborations, and partnerships. Let's discuss how we can build something exceptional.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
